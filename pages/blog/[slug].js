@@ -113,7 +113,7 @@ const Post = ({ post }) => {
 		keywords,
 		body = [],
 	} = post;
-	console.log(body);
+	console.log(categories);
 	return (
 		<div className="container flex flex-col px-6 lg:px-40 py-8 items-center space-y-6 mx-auto ">
 			<Head>
