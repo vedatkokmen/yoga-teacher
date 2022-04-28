@@ -7,7 +7,7 @@ const Drawer = ({ isOpen, setIsOpen }) => {
 	return (
 		isOpen && (
 			<div
-				className="min-h-screen min-w-full bg-black absolute z-10 "
+				className="min-h-screen min-w-full bg-black absolute z-10 overflow-y-hidden"
 				style={{}}
 			>
 				<div className="flex flex-col space-y-6 items-center justify-center mt-8 ">
@@ -48,7 +48,7 @@ function Header() {
 			<div className="container flex justify-between items-center mx-auto py-4 px-10 relative border-b-2">
 				<div className="text-2xl tracking-widest font-bold ">
 					<Link href="/">
-						<a href="#">TYAS GODDESS</a>
+						<a>TYAS GODDESS</a>
 					</Link>
 				</div>
 				<div className="hidden md:flex space-x-6">

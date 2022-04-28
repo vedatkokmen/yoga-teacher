@@ -1,59 +1,76 @@
-import Image from "next/image";
+import imageUrlBuilder from "@sanity/image-url";
+import groq from "groq";
+import Head from "next/head";
 import Link from "next/link";
-const posts = [
-	{
-		id: 1,
-		title: "Yoga Pose of the Week",
-		slug: "blog-post-1",
-		desc: "This weeks yoga pose of the week is: Standing Bow pose. The secrets to success with this yoga pose are a strong foundation and a balance of force.",
-	},
-	{
-		id: 2,
-		title: "Blog Post 2",
-		slug: "blog-post-2",
-		desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-	},
-	{
-		id: 3,
-		title: "Blog Post 3",
-		slug: "blog-post-3",
-		desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-	},
-];
+import client from "../../client";
+function urlFor(source) {
+	return imageUrlBuilder(client).image(source);
+}
 
-function Blog() {
+const Index = ({ posts }) => {
 	return (
 		<>
-			<div className="grid overflow-hidden grid-cols-1 lg:grid-cols-2 lg:mx-16 grid-rows-2 gap-6 mx-4 my-16">
-				{posts.map((post) => (
-					<div
-						key={post.id}
-						className="col-span-1 row-span-1 mb-8 lg:mx-16 text-center"
-					>
-						<Link
-							href={`/blog/${encodeURIComponent(
-								post.slug
-							)}`}
-						>
-							<div className="flex flex-col">
-								<Image
-									src="https://source.unsplash.com/random/400x400"
-									className="w-full hover:opacity-95 cursor-pointer mb-2"
-									height={400}
-									width={400}
-									alt={post.title}
-								/>
-								<a className="mt-2 text-xl font-semibold">
-									{post.title}
-								</a>
-								<p className="mt-2 text-sm">{post.desc}</p>
-							</div>
-						</Link>
-					</div>
-				))}
+			<Head>
+				<title>Tyas Goddess | Blog</title>
+			</Head>
+			<h1 className="text-4xl font-bold text-center mt-16">
+				Blog
+			</h1>
+			<div className="grid overflow-hidden grid-cols-1 md:grid-cols-2 lg:mx-20 grid-rows-2 gap-4 mx-4 my-16">
+				{posts.length > 0 &&
+					posts.map(
+						({
+							_id,
+							title = "",
+							slug = "",
+							publishedAt = "",
+							mainImage = "",
+							description = "",
+						}) =>
+							slug && (
+								<div
+									key={_id}
+									className="col-span-1 row-span-1 mb-8 lg:mx-16 text-center border-2 p-2 "
+								>
+									<Link
+										href="/blog/[slug]"
+										as={`/blog/${slug.current}`}
+									>
+										<div className="cursor-pointer flex flex-col space-y-2 ">
+											<img
+												src={urlFor(mainImage).url()}
+												className="w-full h-96 object-fill"
+											/>
+											<a className="font-semibold text-xl">
+												{title}
+											</a>
+											<div className="text-sm">
+												{description}
+											</div>
+											<div className="text-xs">
+												{new Date(
+													publishedAt
+												).toDateString()}
+											</div>
+										</div>
+									</Link>
+								</div>
+							)
+					)}
 			</div>
 		</>
 	);
+};
+
+export async function getStaticProps() {
+	const posts = await client.fetch(groq`
+      *[_type == "post" && publishedAt < now()]|order(publishedAt desc)
+    `);
+	return {
+		props: {
+			posts,
+		},
+	};
 }
 
-export default Blog;
+export default Index;

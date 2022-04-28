@@ -24,26 +24,23 @@ function Footer() {
 				<div className="grid grid-flow-col gap-4">
 					<Link href="#" passHref>
 						<a>
-							<FaFacebook className="link w-6 h-6 hover:opacity-70" />
+							<FaFacebook className="link w-6 h-6 hover:text-blue-600" />
 						</a>
 					</Link>
 					<Link href="#" passHref>
 						<a>
-							<FaYoutube className="link w-6 h-6 hover:opacity-70" />
+							<FaYoutube className="link w-6 h-6 hover:text-red-600" />
 						</a>
 					</Link>
 					<Link href="#" passHref>
 						<a>
-							<FaTwitter className="link w-6 h-6 hover:opacity-70" />
+							<FaTwitter className="link w-6 h-6 hover:text-blue-400" />
 						</a>
 					</Link>
 				</div>
 			</div>
 			<div>
-				<p>
-					Copyright 2022 - All right reserved by ACME
-					Industries Ltd
-				</p>
+				<p>{new Date().getFullYear()} - Tyas Goddess</p>
 			</div>
 		</footer>
 	);
