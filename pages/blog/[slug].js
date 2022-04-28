@@ -116,11 +116,11 @@ const Post = ({ post }) => {
 		keywords,
 		body = [],
 	} = post;
-	console.log(categories);
+
 	return (
 		<div className="container flex flex-col px-6 lg:px-40 py-8 items-center space-y-6 mx-auto ">
 			<Head>
-				<title>{post.title}</title>
+				<title>{title}</title>
 				{keywords && (
 					<meta
 						name="keywords"
@@ -165,6 +165,7 @@ const Post = ({ post }) => {
 							src={urlFor(mainImage).url()}
 							className="duration-400 scale-110 object-cover object-center transition-all hover:scale-100 md:h-36 lg:h-48"
 							height={400}
+							alt="main image"
 							width={400}
 						/>
 					</div>
@@ -203,7 +204,7 @@ export async function getStaticPaths() {
 
 	return {
 		paths: paths.map((slug) => ({ params: { slug } })),
-		fallback: true,
+		fallback: false,
 	};
 }
 
