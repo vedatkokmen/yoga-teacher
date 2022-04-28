@@ -1,6 +1,7 @@
 import imageUrlBuilder from "@sanity/image-url";
 import groq from "groq";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import client from "../../client";
 function urlFor(source) {
@@ -37,13 +38,17 @@ const Index = ({ posts }) => {
 										>
 											<div className="shadow-cla-pink h-full overflow-hidden rounded-xl bg-gradient-to-r from-fuchsia-50 to-pink-50">
 												<Link
+													passHref
 													href="/blog/[slug]"
 													as={`/blog/${slug.current}`}
 												>
 													<div className="cursor-pointer flex flex-col space-y-2 ">
-														<img
+														<Image
 															src={urlFor(mainImage).url()}
 															className="duration-400 w-full scale-110 object-cover object-center transition-all hover:scale-100 md:h-36 lg:h-48"
+															alt={title}
+															width={400}
+															height={400}
 														/>
 														<div className="p-6">
 															<h2 className="title-font mb-1 text-xs font-medium tracking-widest text-gray-400">

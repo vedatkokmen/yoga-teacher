@@ -2,6 +2,7 @@ import { PortableText } from "@portabletext/react";
 import imageUrlBuilder from "@sanity/image-url";
 import groq from "groq";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import { FaChevronLeft } from "react-icons/fa";
 import client from "../../client";
@@ -158,9 +159,11 @@ const Post = ({ post }) => {
 				)}
 				{mainImage && (
 					<div className="flex items-center justify-center my-6">
-						<img
+						<Image
 							src={urlFor(mainImage).url()}
-							className="w-auto h-96 object-fill"
+							className="duration-400 scale-110 object-cover object-center transition-all hover:scale-100 md:h-36 lg:h-48"
+							height={400}
+							width={400}
 						/>
 					</div>
 				)}
@@ -170,7 +173,7 @@ const Post = ({ post }) => {
 					components={ptComponents}
 				/>
 			</article>
-			<Link href="/blog">
+			<Link href="/blog" passHref>
 				<div className="flex items-center hover:opacity-80 cursor-pointer">
 					<FaChevronLeft className="text-2xl mr-2" />
 					<a className="text-center font-semibold">

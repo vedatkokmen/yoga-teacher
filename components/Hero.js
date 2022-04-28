@@ -8,6 +8,7 @@ function Hero() {
 				className="w-full h-screen object-cover"
 				height={900}
 				width={900}
+				alt="Yoga"
 			/>
 		</div>
 	);
