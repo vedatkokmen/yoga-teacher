@@ -31,12 +31,6 @@ function Testimonials() {
           <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900 pb-2">
             Find some testimonials about me
           </h1>
-          <p className="text-gray-400 font-normal text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
         </div>
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white rounded-lg p-6 border-2">
@@ -45,24 +39,37 @@ function Testimonials() {
                 className="h-28 w-28 object-cover object-center rounded-full"
                 src="/1.jpg"
                 alt="photo"
-                height={100}
+                height="100"
                 width="100"
               />
               <div>
                 <p className="text-xl text-gray-700 font-normal mb-1">
-                  Dany Bailey
+                  Nádia Baena
                 </p>
-                <p className="text-base text-blue-600 font-normal">
-                  Software Engineer
-                </p>
+                <p className="text-base text-blue-600 font-normal">Architect</p>
               </div>
             </div>
             <div>
-              <p className="text-gray-400 leading-loose font-normal text-base">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+              <p className="text-gray-400 leading-loose font-normal text-base indent-6 indent-6">
+                I started my classes with Tyas in mid-April/2022, and in just
+                one month, I can see and feel huge changes in my body and
+                emotions. I started practice yoga in August 2021, but it was not
+                constant, and I did not see much progress. So this year, I
+                decided that I wanted to learn and make yoga part of my routine.
+                I met Tyas while looking for a private teacher, and she has been
+                the best choice I could have made. I have improved a lot with
+                her. At first, she corrected me and adjusted the postures a lot,
+                but now I can see/feel when the asana is not correct, and she
+                guides me in practice. The best progress has been in headstand
+                (Sirsasana) without help or support. I remember trying to do it
+                in our first week, and it seemed impossible, but with many
+                exercises to strengthen the core and breathing, in 21 classes, I
+                did it alone, and it was the best feeling in the world. Tyas is
+                very dedicated to the practice. She does it with her heart. Her
+                classes are very fun, I always have a great time! I could spend
+                hours saying good things about this young yoga teacher, but I
+                think the best thing is to try a class with her and have no
+                doubts that she is an excellent teacher and person.
               </p>
             </div>
           </div>
@@ -72,12 +79,12 @@ function Testimonials() {
                 className="h-28 w-28 object-cover object-center rounded-full"
                 src="/1.jpg"
                 alt="photo"
-                height={100}
+                height="100"
                 width="100"
               />
               <div>
                 <p className="text-xl text-gray-700 font-normal mb-1">
-                  Lucy Carter
+                  Meta Sasmita
                 </p>
                 <p className="text-base text-blue-600 font-normal">
                   Graphic Designer
@@ -85,11 +92,16 @@ function Testimonials() {
               </div>
             </div>
             <div>
-              <p className="text-gray-400 leading-loose font-normal text-base">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+              <p className="text-gray-400 leading-loose font-normal text-base indent-6">
+                I have never been much a yoga person and only started exploring
+                it consistently this year. I first came across Tyas during one
+                of her love & kindness meditation yoga session and I’ve been
+                hooked ever since! I come out of that class like a brand new
+                woman, every single time. I also started going to the Hatha Flow
+                classes and have been seeing progress with my flexibility. Tyas
+                is a patient, dedicated yoga teacher and her voice is super
+                calming. Thank you for making yoga an integral part of my life
+                now 💗
               </p>
             </div>
           </div>
@@ -99,7 +111,7 @@ function Testimonials() {
                 className="h-28 w-28 object-cover object-center rounded-full"
                 src="/1.jpg"
                 alt="photo"
-                height={100}
+                height="100"
                 width="100"
               />
               <div>
@@ -110,7 +122,7 @@ function Testimonials() {
               </div>
             </div>
             <div>
-              <p className="text-gray-400 leading-loose font-normal text-base">
+              <p className="text-gray-400 leading-loose font-normal text-base indent-6">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -124,7 +136,7 @@ function Testimonials() {
                 className="h-28 w-28 object-cover object-center rounded-full"
                 src="/2.jpg"
                 alt="photo"
-                height={100}
+                height="100"
                 width="100"
               />
               <div>
@@ -137,7 +149,7 @@ function Testimonials() {
               </div>
             </div>
             <div>
-              <p className="text-gray-400 leading-loose font-normal text-base">
+              <p className="text-gray-400 leading-loose font-normal text-base indent-6">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -151,7 +163,7 @@ function Testimonials() {
                 className="h-28 w-28 object-cover object-center rounded-full"
                 src="/3.jpg"
                 alt="photo"
-                height={100}
+                height="100"
                 width="100"
               />
               <div>
@@ -164,7 +176,7 @@ function Testimonials() {
               </div>
             </div>
             <div>
-              <p className="text-gray-400 leading-loose font-normal text-base">
+              <p className="text-gray-400 leading-loose font-normal text-base indent-6">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -178,7 +190,7 @@ function Testimonials() {
                 className="h-28 w-28 object-cover object-center rounded-full"
                 src="/4.jpg"
                 alt="photo"
-                height={100}
+                height="100"
                 width="100"
               />
               <div>
@@ -189,7 +201,7 @@ function Testimonials() {
               </div>
             </div>
             <div>
-              <p className="text-gray-400 leading-loose font-normal text-base">
+              <p className="text-gray-400 leading-loose font-normal text-base indent-6">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
