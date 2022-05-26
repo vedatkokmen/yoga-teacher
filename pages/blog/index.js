@@ -27,7 +27,6 @@ const Index = ({ posts }) => {
                   publishedAt = "",
                   mainImage = "",
                   description = "",
-                  categories,
                 }) =>
                   slug && (
                     <div key={_id} className="p-4 md:w-1/2 lg:w-1/3">
@@ -46,13 +45,6 @@ const Index = ({ posts }) => {
                               height={400}
                             />
                             <div className="p-6">
-                              <h2 className="title-font mb-1 text-xs font-medium tracking-widest text-gray-400">
-                                {/* Categories:{" "}
-																{categories.map(
-																	(category) =>
-																		category.title
-																)} */}
-                              </h2>
                               <p className="text-xs mb-1 text-gray-300">
                                 {new Date(publishedAt).toDateString()}
                               </p>

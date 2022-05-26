@@ -12,7 +12,7 @@ function Footer() {
         <Link href="/blog">
           <a className="link link-hover">Blog</a>
         </Link>
-        <Link href="/testimonaisl">
+        <Link href="/testimonials">
           <a className="link link-hover">Testimonials</a>
         </Link>
         <Link href="/about">

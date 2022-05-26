@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Hero from "../components/Hero";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -42,9 +43,11 @@ export default function Home() {
                 <br />
                 Let&apos;s dive in.
               </p>
-              <button className="bg-black rounded-md py-3 px-7 mt-6 text-white">
-                Get in touch
-              </button>
+              <Link href="mailto:namastetyas@gmail.com" passHref>
+                <button className="bg-black rounded-md py-3 px-7 mt-6 text-white">
+                  Get in touch
+                </button>
+              </Link>
             </div>
           </div>
         </div>

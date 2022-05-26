@@ -1,13 +1,20 @@
-/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import Image from "next/image";
+import client from "../../client";
+import groq from "groq";
+import imageUrlBuilder from "@sanity/image-url";
 
-function Testimonials() {
+function urlFor(source) {
+  return imageUrlBuilder(client).image(source);
+}
+
+function Testimonials({ testimonials }) {
   return (
     <div>
       <Head>
         <title>Testimonials | Soul Sanctuary by Tyas</title>
       </Head>
+
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
         <div className="w-full text-center pb-8">
           <svg
@@ -33,186 +40,60 @@ function Testimonials() {
           </h1>
         </div>
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white rounded-lg p-6 border-2">
-            <div className="flex items-center space-x-6 mb-4">
-              <Image
-                className="h-28 w-28 object-cover object-center rounded-full"
-                src="/1.jpg"
-                alt="photo"
-                height="100"
-                width="100"
-              />
-              <div>
-                <p className="text-xl text-gray-700 font-normal mb-1">
-                  Nádia Baena
-                </p>
-                <p className="text-base text-blue-600 font-normal">Architect</p>
-              </div>
-            </div>
-            <div>
-              <p className="text-gray-400 leading-loose font-normal text-base indent-6 indent-6">
-                I started my classes with Tyas in mid-April/2022, and in just
-                one month, I can see and feel huge changes in my body and
-                emotions. I started practice yoga in August 2021, but it was not
-                constant, and I did not see much progress. So this year, I
-                decided that I wanted to learn and make yoga part of my routine.
-                I met Tyas while looking for a private teacher, and she has been
-                the best choice I could have made. I have improved a lot with
-                her. At first, she corrected me and adjusted the postures a lot,
-                but now I can see/feel when the asana is not correct, and she
-                guides me in practice. The best progress has been in headstand
-                (Sirsasana) without help or support. I remember trying to do it
-                in our first week, and it seemed impossible, but with many
-                exercises to strengthen the core and breathing, in 21 classes, I
-                did it alone, and it was the best feeling in the world. Tyas is
-                very dedicated to the practice. She does it with her heart. Her
-                classes are very fun, I always have a great time! I could spend
-                hours saying good things about this young yoga teacher, but I
-                think the best thing is to try a class with her and have no
-                doubts that she is an excellent teacher and person.
-              </p>
-            </div>
-          </div>
-          <div className="bg-white rounded-lg p-6 border-2">
-            <div className="flex items-center space-x-6 mb-4">
-              <Image
-                className="h-28 w-28 object-cover object-center rounded-full"
-                src="/1.jpg"
-                alt="photo"
-                height="100"
-                width="100"
-              />
-              <div>
-                <p className="text-xl text-gray-700 font-normal mb-1">
-                  Meta Sasmita
-                </p>
-                <p className="text-base text-blue-600 font-normal">
-                  Graphic Designer
-                </p>
-              </div>
-            </div>
-            <div>
-              <p className="text-gray-400 leading-loose font-normal text-base indent-6">
-                I have never been much a yoga person and only started exploring
-                it consistently this year. I first came across Tyas during one
-                of her love & kindness meditation yoga session and I’ve been
-                hooked ever since! I come out of that class like a brand new
-                woman, every single time. I also started going to the Hatha Flow
-                classes and have been seeing progress with my flexibility. Tyas
-                is a patient, dedicated yoga teacher and her voice is super
-                calming. Thank you for making yoga an integral part of my life
-                now 💗
-              </p>
-            </div>
-          </div>
-          <div className="bg-white rounded-lg p-6 border-2">
-            <div className="flex items-center space-x-6 mb-4">
-              <Image
-                className="h-28 w-28 object-cover object-center rounded-full"
-                src="/1.jpg"
-                alt="photo"
-                height="100"
-                width="100"
-              />
-              <div>
-                <p className="text-xl text-gray-700 font-normal mb-1">
-                  Jade Bradley
-                </p>
-                <p className="text-base text-blue-600 font-normal">Dev Ops</p>
-              </div>
-            </div>
-            <div>
-              <p className="text-gray-400 leading-loose font-normal text-base indent-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </div>
-          <div className="bg-white rounded-lg p-6 border-2">
-            <div className="flex items-center space-x-6 mb-4">
-              <Image
-                className="h-28 w-28 object-cover object-center rounded-full"
-                src="/2.jpg"
-                alt="photo"
-                height="100"
-                width="100"
-              />
-              <div>
-                <p className="text-xl text-gray-700 font-normal mb-1">
-                  Lucy Carter
-                </p>
-                <p className="text-base text-blue-600 font-normal">
-                  Graphic Designer
-                </p>
-              </div>
-            </div>
-            <div>
-              <p className="text-gray-400 leading-loose font-normal text-base indent-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </div>
-          <div className="bg-white rounded-lg p-6 border-2">
-            <div className="flex items-center space-x-6 mb-4">
-              <Image
-                className="h-28 w-28 object-cover object-center rounded-full"
-                src="/3.jpg"
-                alt="photo"
-                height="100"
-                width="100"
-              />
-              <div>
-                <p className="text-xl text-gray-700 font-normal mb-1">
-                  Dany Bailey
-                </p>
-                <p className="text-base text-blue-600 font-normal">
-                  Software Engineer
-                </p>
-              </div>
-            </div>
-            <div>
-              <p className="text-gray-400 leading-loose font-normal text-base indent-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </div>
-          <div className="bg-white rounded-lg p-6 border-2">
-            <div className="flex items-center space-x-6 mb-4">
-              <Image
-                className="h-28 w-28 object-cover object-center rounded-full"
-                src="/4.jpg"
-                alt="photo"
-                height="100"
-                width="100"
-              />
-              <div>
-                <p className="text-xl text-gray-700 font-normal mb-1">
-                  Jade Bradley
-                </p>
-                <p className="text-base text-blue-600 font-normal">Dev Ops</p>
-              </div>
-            </div>
-            <div>
-              <p className="text-gray-400 leading-loose font-normal text-base indent-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </div>
+          {testimonials.length > 0 &&
+            testimonials.map(
+              ({
+                _id,
+                name = "",
+                content = "",
+                authorTitle = "",
+                authorImage = "",
+              }) =>
+                content && (
+                  <div className="bg-white rounded-lg p-6 border-2" key={_id}>
+                    <div className="flex items-center space-x-6 mb-4">
+                      {authorImage && (
+                        <Image
+                          className="h-28 w-28 object-cover object-center rounded-full"
+                          src={urlFor(authorImage).url()}
+                          alt="photo"
+                          height="100"
+                          width="100"
+                        />
+                      )}
+
+                      <div>
+                        <p className="text-xl text-gray-700 font-normal mb-1">
+                          {name}
+                        </p>
+                        <p className="text-base text-blue-600 font-normal">
+                          {authorTitle}
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <p className="text-gray-400 leading-loose font-normal text-base indent-6">
+                        {content}
+                      </p>
+                    </div>
+                  </div>
+                )
+            )}
         </div>
       </section>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const testimonials = await client.fetch(groq`
+      *[_type == "testimonial"]
+    `);
+  return {
+    props: {
+      testimonials,
+    },
+  };
 }
 
 export default Testimonials;
