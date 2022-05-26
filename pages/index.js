@@ -10,7 +10,7 @@ export default function Home() {
         <title>Soul Sanctuary by Tyas</title>
         <meta
           name="description"
-          content="Welcome to the Yoga Teacher. I'm Tyas - a committed and passionate international yoga teacher, eclectic lifestyle muse, life coach and entrepreneur."
+          content="Welcome to the Soul Sanctuary. I'm Tyas - a committed and passionate international yoga teacher, eclectic lifestyle muse, life coach and entrepreneur."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

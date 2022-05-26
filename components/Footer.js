@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -21,19 +21,25 @@ function Footer() {
       </div>
       <div>
         <div className="grid grid-flow-col gap-4">
-          <Link href="#" passHref>
+          <Link href="https://instagram.com/ayuningt.y.a.s" passHref>
             <a>
-              <FaFacebook className="link w-6 h-6 hover:text-blue-600" />
+              <FaInstagram className="link w-6 h-6 hover:text-blue-600" />
             </a>
           </Link>
-          <Link href="#" passHref>
+          <Link
+            href="https://www.youtube.com/channel/UCetrN7P7CkU53aZAzMbzjPw"
+            passHref
+          >
             <a>
               <FaYoutube className="link w-6 h-6 hover:text-red-600" />
             </a>
           </Link>
-          <Link href="#" passHref>
+          <Link
+            href="https://id.linkedin.com/in/metri-kumala-ayuningtyas-9349a51b8"
+            passHref
+          >
             <a>
-              <FaTwitter className="link w-6 h-6 hover:text-blue-400" />
+              <FaLinkedin className="link w-6 h-6 hover:text-blue-400" />
             </a>
           </Link>
         </div>

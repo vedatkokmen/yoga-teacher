@@ -36,7 +36,7 @@ function Testimonials({ testimonials }) {
           </svg>
 
           <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900 pb-2">
-            Find some testimonials about me
+            Hear their words
           </h1>
         </div>
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
