@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Hero from "../components/Hero";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,10 +13,10 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container mx-auto">
-        <div className="md:grid grid-cols-1 md:grid-cols-2 h-screen ">
-          <div className="md:h-screen relative">
-            <Image src="/3.jpg" alt="Tyas" layout="fill" objectFit="cover" />
+      <div className="container mx-auto h-screen">
+        <div className="grid grid-cols-1 md:grid-cols-2 h-screen">
+          <div className="relative">
+            <Image src="/5.jpeg" alt="Tyas" layout="fill" objectFit="cover" />
           </div>
           <div className="flex bg-gray-100 p-10">
             <div className="mb-auto mt-auto max-w-lg">
@@ -25,6 +24,7 @@ export default function Home() {
               <p className="font-semibold mb-5">Yoga Teacher</p>
               <p>
                 Namaste loves,
+                <br />
                 <br />
                 I am Tyas, a dedicated soulful yoga teacher, presenting to you
                 an online shala and a safe space for your soul to return home, a
@@ -35,11 +35,13 @@ export default function Home() {
                 the revelation of how amazingly powerful you and your body can
                 be.
                 <br />
+                <br />
                 My intention is to bring awareness of self-love and
                 self-excellence through yoga. To eventually discover that you
                 are a part of something greater, a micro universe, await to be
                 awaken. To get connected to the macro universe. Therefore, you
                 can live your life fully and make your soul genuinely happy.
+                <br />
                 <br />
                 Let&apos;s dive in.
               </p>

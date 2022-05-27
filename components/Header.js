@@ -10,7 +10,7 @@ const Drawer = ({ isOpen, setIsOpen }) => {
         className="min-h-screen min-w-full bg-black absolute z-10 overflow-y-hidden"
         style={{}}
       >
-        <div className="flex flex-col space-y-6 items-center justify-center mt-8 ">
+        <div className="flex flex-col space-y-6 items-center justify-center mt-8">
           <Link href="/">
             <a
               className="text-white text-xl hover:border-b-4"
@@ -53,7 +53,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className="container flex justify-between items-center mx-auto py-4 px-10 relative border-b-2">
+      <div className="container flex justify-between items-center mx-auto py-4 relative border-b-2">
         <div className="text-2xl tracking-widest font-bold ">
           <Link href="/">
             <a>Soul Sanctuary by Tyas</a>
